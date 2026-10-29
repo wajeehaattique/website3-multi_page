@@ -1,310 +1,1155 @@
-<!DOCTYPE html>
-<html class="dark" lang="en"><head><title>Wajeeha Attique | Galaxy Terminal</title><meta content="Wajeeha Attique — Computer Science student exploring AI." name="description"/><link href="style.css" rel="stylesheet"/><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"inverse-on-surface":"#2b2f45","on-background":"#dee1fd","on-secondary-container":"#ffe0f0","surface":"#0e1226","on-primary-fixed-variant":"#004f58","outline":"#849396","surface-container":"#1a1e33","on-secondary-fixed":"#3a0030","on-error-container":"#ffdad6","on-error":"#690005","tertiary-fixed":"#aff833","primary-container":"#00e5ff","surface-container-lowest":"#090d21","tertiary-container":"#9ee51b","inverse-primary":"#006875","surface-dim":"#0e1226","on-surface-variant":"#bac9cc","surface-bright":"#34384e","inverse-surface":"#dee1fd","primary-fixed-dim":"#00daf3","secondary-container":"#c000a2","surface-container-highest":"#303449","on-secondary-fixed-variant":"#860070","on-tertiary":"#223600","surface-container-low":"#161a2f","primary":"#c3f5ff","on-primary-fixed":"#001f24","tertiary":"#c5ff6b","outline-variant":"#3b494c","on-primary-container":"#00626e","primary-fixed":"#9cf0ff","on-tertiary-container":"#416300","on-primary":"#00363d","on-secondary":"#5f004f","error":"#ffb4ab","surface-container-high":"#25293e","surface-tint":"#00daf3","tertiary-fixed-dim":"#95da03","on-surface":"#dee1fd","background":"#0e1226","surface-variant":"#303449","secondary-fixed-dim":"#ffade3","secondary":"#ffade3","secondary-fixed":"#ffd8ee","on-tertiary-fixed-variant":"#334f00","on-tertiary-fixed":"#121f00","error-container":"#93000a"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"margin-desktop":"3rem","space-2xl":"4rem","margin":"1rem","space-lg":"1.5rem","space-xs":"0.25rem","space-sm":"0.5rem","margin-tablet":"2rem","space-xl":"2.5rem","space-md":"1rem","gutter":"1rem","gutter-desktop":"1.5rem"},"fontFamily":{"code-dense":["JetBrains Mono"],"headline-md":["Space Grotesk"],"headline-lg":["Space Grotesk"],"label-md":["JetBrains Mono"],"display-xl":["Space Grotesk"],"body-md":["JetBrains Mono"],"headline-lg-mobile":["Space Grotesk"],"body-sm":["JetBrains Mono"],"label-sm":["JetBrains Mono"],"display-xl-mobile":["Space Grotesk"],"headline-sm":["Space Grotesk"],"body-lg":["JetBrains Mono"],"title-code":["JetBrains Mono"]},"fontSize":{"code-dense":["12px",{"lineHeight":"16px","letterSpacing":"0em","fontWeight":"400"}],"headline-md":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"600"}],"label-md":["13px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"500"}],"display-xl":["56px",{"lineHeight":"64px","letterSpacing":"-0.03em","fontWeight":"700"}],"body-md":["14px",{"lineHeight":"22px","letterSpacing":"0em","fontWeight":"400"}],"headline-lg-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"400"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.06em","fontWeight":"500"}],"display-xl-mobile":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-sm":["20px",{"lineHeight":"28px","letterSpacing":"0em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"26px","letterSpacing":"-0.01em","fontWeight":"400"}],"title-code":["16px",{"lineHeight":"24px","letterSpacing":"0.02em","fontWeight":"600"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen relative flex flex-col"><div class="fixed inset-0 pointer-events-none -z-10 overflow-hidden"><div class="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-secondary-container/15 blur-[120px]"></div><div class="absolute top-1/3 -right-32 w-[32rem] h-[32rem] rounded-full bg-primary-container/10 blur-[140px]"></div><div class="absolute -bottom-20 left-1/4 w-[28rem] h-[28rem] rounded-full bg-tertiary-container/10 blur-[130px]"></div></div><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/80 backdrop-blur-xl"><div class="h-10 w-full px-space-md flex items-center justify-between"><div class="flex items-center gap-space-sm w-48"><div class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-full bg-error inline-block"></span><span class="w-3 h-3 rounded-full bg-[#FFBD2E] inline-block"></span><span class="w-3 h-3 rounded-full bg-tertiary-fixed inline-block"></span></div><span class="ml-space-sm font-label-sm text-label-sm text-outline hidden sm:inline tracking-wider uppercase">IDE v2.4</span></div><div class="flex-1 flex items-center justify-center"><div class="flex items-center gap-space-xs px-space-md py-0.5 rounded bg-surface-container/60 font-code-dense text-code-dense text-on-surface-variant"><span class="text-primary-container">~/developer/cv</span><span class="text-outline">-</span><span class="text-on-surface font-medium">Galaxy Terminal</span></div></div><div class="flex items-center justify-end gap-space-md w-48"><span class="font-label-sm text-label-sm text-primary font-medium hidden md:inline tracking-wider">SYS_NOMINAL</span><img alt="Profile" class="w-7 h-7 rounded-full object-cover ring-1 ring-primary-container/40" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20200%20200%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20stop-color%3D%22%23a78bfa%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23ec4899%22/%3E%3C/linearGradient%3E%3CradialGradient%20id%3D%22b%22%3E%3Cstop%20stop-color%3D%22%2327204e%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23080d22%22/%3E%3C/radialGradient%3E%3C/defs%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%22100%22%20r%3D%2298%22%20fill%3D%22url%28%23b%29%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%22100%22%20r%3D%2294%22%20fill%3D%22none%22%20stroke%3D%22%2300e5ff%22%20stroke-width%3D%223%22/%3E%3Cpath%20d%3D%22M42%20200c2-40%2023-62%2058-62s56%2022%2058%2062%22%20fill%3D%22url%28%23g%29%22/%3E%3Cpath%20d%3D%22M54%2094c-7-45%2013-70%2046-70s54%2025%2046%2070l-4%2048c-9%2018-25%2026-42%2026s-33-8-42-26z%22%20fill%3D%22url%28%23g%29%22/%3E%3Cellipse%20cx%3D%22100%22%20cy%3D%2291%22%20rx%3D%2234%22%20ry%3D%2243%22%20fill%3D%22%23d7b7ff%22/%3E%3Cpath%20d%3D%22M64%2083c-4-35%2015-54%2039-54%2026%200%2041%2020%2035%2051-13-2-28-15-34-26-8%2017-23%2025-40%2029z%22%20fill%3D%22url%28%23g%29%22/%3E%3Cpath%20d%3D%22M61%2085c-3%2024%201%2049%2013%2064l-7-1c-20-20-22-54-6-75zM139%2080c9%2025%202%2055-13%2070l9-2c18-22%2018-52%204-73z%22%20fill%3D%22url%28%23g%29%22/%3E%3C/svg%3E"/></div></div></header><aside class="fixed left-0 top-10 bottom-7 w-12 bg-surface-container-lowest flex flex-col items-center py-space-sm justify-between z-40"><div class="flex flex-col items-center gap-space-sm w-full"><button class="w-10 h-10 flex items-center justify-center rounded text-primary-container bg-surface-container-high/60 transition-colors" title="Explorer" type="button"><span class="material-symbols-outlined text-[20px]">folder</span></button><button class="w-10 h-10 flex items-center justify-center rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" title="Search" type="button"><span class="material-symbols-outlined text-[20px]">search</span></button><button class="w-10 h-10 flex items-center justify-center rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" title="Source Control" type="button"><span class="material-symbols-outlined text-[20px]">alt_route</span></button><button class="w-10 h-10 flex items-center justify-center rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" title="Run and Debug" type="button"><span class="material-symbols-outlined text-[20px]">play_arrow</span></button><button class="w-10 h-10 flex items-center justify-center rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" title="Extensions" type="button"><span class="material-symbols-outlined text-[20px]">extension</span></button></div><div class="flex flex-col items-center gap-space-xs w-full"><button class="w-10 h-10 flex items-center justify-center rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" title="Terminal Console" type="button"><span class="material-symbols-outlined text-[20px]">terminal</span></button><button class="w-10 h-10 flex items-center justify-center rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" title="Preferences" type="button"><span class="material-symbols-outlined text-[20px]">settings</span></button></div></aside><aside class="fixed left-12 top-10 bottom-7 w-60 bg-surface-container-low/90 backdrop-blur-md flex flex-col z-30"><div class="h-9 px-space-md flex items-center justify-between bg-surface-container-low"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">EXPLORER : CV_WORKSPACE</span><span class="material-symbols-outlined text-[16px] text-outline hover:text-on-surface cursor-pointer">more_horiz</span></div><div class="px-space-sm py-1"><div class="flex items-center gap-1 px-space-xs py-1 text-on-surface-variant font-label-sm text-label-sm font-semibold tracking-wide uppercase"><span class="material-symbols-outlined text-[14px]">expand_more</span><span class="">GALAXY-TERMINAL</span></div></div><nav class="flex-1 flex flex-col px-space-sm gap-0.5 overflow-y-auto" data-active-classes="bg-surface-container-highest text-primary-container font-semibold"><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded font-code-dense text-code-dense text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="profile-md" href="profile.html"><span class="material-symbols-outlined text-[15px] text-primary">description</span><span class="">profile.md</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded font-code-dense text-code-dense text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="skills-js" href="skills.html"><span class="material-symbols-outlined text-[15px] text-tertiary">javascript</span><span class="">skills.js</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded font-code-dense text-code-dense text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="languages-json" href="languages.html"><span class="material-symbols-outlined text-[15px] text-secondary">data_object</span><span class="">languages.json</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded font-code-dense text-code-dense text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="education-json" href="education.html"><span class="material-symbols-outlined text-[15px] text-secondary">data_object</span><span class="">education.json</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded font-code-dense text-code-dense text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="projects" href="projects.html"><span class="material-symbols-outlined text-[15px] text-primary-container">folder_open</span><span class="">projects/</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded font-code-dense text-code-dense text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="certifications-md" href="certifications.html"><span class="material-symbols-outlined text-[15px] text-primary">verified</span><span class="">certifications.md</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded font-code-dense text-code-dense text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="contact-sh" href="contact.html"><span class="material-symbols-outlined text-[15px] text-tertiary-fixed">terminal</span><span class="">contact.sh</span></a></nav><div class="p-space-sm m-space-sm rounded bg-surface-container/70"><div class="flex items-center justify-between mb-1"><span class="font-label-sm text-label-sm text-outline uppercase">CORE_METRICS</span><span class="font-label-sm text-label-sm text-tertiary-fixed font-bold">99.8%</span></div><div class="w-full h-1 bg-surface-container-lowest rounded-full overflow-hidden"><div class="h-full w-4/5 bg-primary-container"></div></div></div></aside><div class="pl-72 flex flex-col flex-1"><div class="fixed top-10 left-72 right-0 h-10 bg-surface-container/70 backdrop-blur-md z-20 flex items-center overflow-x-auto px-space-sm gap-1"><div class="flex items-center h-8 px-space-md gap-space-sm rounded-t bg-surface text-primary-container font-code-dense text-code-dense font-medium shadow-[0_-1px_0_0_#00e5ff_inset]"><span class="material-symbols-outlined text-[15px] text-primary">description</span><span class="">profile.md</span><span class="material-symbols-outlined text-[13px] text-outline hover:text-on-surface cursor-pointer ml-1">close</span></div><div class="flex items-center h-8 px-space-md gap-space-sm rounded-t text-on-surface-variant hover:bg-surface-container-high/50 font-code-dense text-code-dense cursor-pointer transition-colors"><span class="material-symbols-outlined text-[15px] text-tertiary">javascript</span><span class="">skills.js</span></div><div class="flex items-center h-8 px-space-md gap-space-sm rounded-t text-on-surface-variant hover:bg-surface-container-high/50 font-code-dense text-code-dense cursor-pointer transition-colors"><span class="material-symbols-outlined text-[15px] text-primary-container">folder_open</span><span class="">projects/</span></div><div class="flex items-center h-8 px-space-md gap-space-sm rounded-t text-on-surface-variant hover:bg-surface-container-high/50 font-code-dense text-code-dense cursor-pointer transition-colors"><span class="material-symbols-outlined text-[15px] text-tertiary-fixed">terminal</span><span class="">contact.sh</span></div></div><main class="relative pt-20 pb-44 w-full px-space-md bg-surface/40 min-h-screen"><div class="flex flex-col w-full">
-<div class="relative w-full max-w-6xl mx-auto space-y-space-xl">
-<!-- Hero / Welcome Command Center Banner -->
-<div class="relative overflow-hidden rounded-xl bg-surface-container-low/80 backdrop-blur-xl shadow-2xl p-space-lg sm:p-space-xl">
-<!-- Ambient Cosmic Glow Spots -->
-<div class="absolute -top-24 -right-24 w-80 h-80 rounded-full bg-secondary-container/20 blur-[100px] pointer-events-none"></div>
-<div class="absolute -bottom-24 -left-24 w-80 h-80 rounded-full bg-primary-container/15 blur-[110px] pointer-events-none"></div>
-<!-- Top Meta Breadcrumb bar -->
-<div class="flex items-center justify-between pb-space-md mb-space-lg">
-<div class="flex items-center gap-space-sm font-code-dense text-code-dense text-outline">
-<span class="material-symbols-outlined text-[16px] text-primary-container">terminal</span>
-<span class="">workspace</span>
-<span class="">/</span>
-<span class="text-on-surface">welcome.tsx</span>
-<span class="px-1.5 py-0.5 rounded bg-surface-container-highest/60 text-label-sm font-label-sm text-tertiary">READY</span>
-</div>
-<div class="flex items-center gap-2">
-<span class="w-2 h-2 rounded-full bg-tertiary-fixed animate-ping"></span>
-<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest hidden sm:inline">KERNEL_STABLE</span>
-</div>
-</div>
-<!-- Main Profile & Identity Split -->
-<div class="flex flex-col lg:flex-row items-center lg:items-start gap-space-xl">
-<!-- Avatar Block -->
-<div class="relative flex-shrink-0 group">
-<div class="absolute -inset-1 rounded-full bg-gradient-to-r from-primary-container via-secondary-container to-tertiary-fixed opacity-70 blur-md group-hover:opacity-100 transition-opacity"></div>
-<div class="relative w-36 h-36 sm:w-44 sm:h-44 rounded-full overflow-hidden bg-surface-container-lowest p-1 shadow-2xl">
-<img alt="Minimalist Silhouette Avatar with Flowing Hair" class="w-full h-full object-cover rounded-full" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20200%20200%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20stop-color%3D%22%23a78bfa%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23ec4899%22/%3E%3C/linearGradient%3E%3CradialGradient%20id%3D%22b%22%3E%3Cstop%20stop-color%3D%22%2327204e%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23080d22%22/%3E%3C/radialGradient%3E%3C/defs%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%22100%22%20r%3D%2298%22%20fill%3D%22url%28%23b%29%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%22100%22%20r%3D%2294%22%20fill%3D%22none%22%20stroke%3D%22%2300e5ff%22%20stroke-width%3D%223%22/%3E%3Cpath%20d%3D%22M42%20200c2-40%2023-62%2058-62s56%2022%2058%2062%22%20fill%3D%22url%28%23g%29%22/%3E%3Cpath%20d%3D%22M54%2094c-7-45%2013-70%2046-70s54%2025%2046%2070l-4%2048c-9%2018-25%2026-42%2026s-33-8-42-26z%22%20fill%3D%22url%28%23g%29%22/%3E%3Cellipse%20cx%3D%22100%22%20cy%3D%2291%22%20rx%3D%2234%22%20ry%3D%2243%22%20fill%3D%22%23d7b7ff%22/%3E%3Cpath%20d%3D%22M64%2083c-4-35%2015-54%2039-54%2026%200%2041%2020%2035%2051-13-2-28-15-34-26-8%2017-23%2025-40%2029z%22%20fill%3D%22url%28%23g%29%22/%3E%3Cpath%20d%3D%22M61%2085c-3%2024%201%2049%2013%2064l-7-1c-20-20-22-54-6-75zM139%2080c9%2025%202%2055-13%2070l9-2c18-22%2018-52%204-73z%22%20fill%3D%22url%28%23g%29%22/%3E%3C/svg%3E"/>
-</div>
-<div class="absolute bottom-1 right-2 bg-surface-container-lowest px-2 py-0.5 rounded-full flex items-center gap-1 shadow-lg">
-<span class="w-2.5 h-2.5 rounded-full bg-tertiary-fixed"></span>
-<span class="font-label-sm text-label-sm text-tertiary-fixed font-bold">ONLINE</span>
-</div>
-</div>
-<!-- Typography & Bio Details -->
-<div class="flex-1 text-center lg:text-left space-y-space-sm">
-<div class="flex flex-wrap items-center justify-center lg:justify-start gap-space-xs mb-1">
-<span class="px-2.5 py-0.5 rounded font-label-sm text-label-sm bg-secondary-container/30 text-secondary-fixed font-semibold tracking-wider uppercase">
-              CS Student
-            </span>
-<span class="px-2.5 py-0.5 rounded font-label-sm text-label-sm bg-primary-container/20 text-primary font-semibold tracking-wider uppercase">
-              AI Enthusiast
-            </span>
-<span class="px-2.5 py-0.5 rounded font-label-sm text-label-sm bg-surface-container-highest/80 text-on-surface-variant font-medium tracking-wider uppercase">
-              5th Semester
-            </span>
-</div>
-<!-- Dynamic Title with Neon Glow & Cursor -->
-<div class="inline-flex items-center gap-2">
-<h1 class="font-display-xl text-display-xl text-primary font-bold tracking-tight drop-shadow-[0_0_20px_rgba(0,229,255,0.45)]">
-              Wajeeha Attique
-            </h1>
-<span class="w-3 h-10 sm:h-12 bg-primary-container inline-block animate-pulse align-middle"></span>
-</div>
-<p class="font-headline-sm text-headline-sm text-on-surface font-medium">
-            CS Student | AI Enthusiast
-          </p>
-<p class="font-body-md text-body-md text-outline max-w-2xl">
-            5th Semester Computer Science Student • Open to AI Opportunities. Exploring deep neural systems, reactive terminal architectures, and distributed systems tooling.
-          </p>
-<!-- Action Matrix / Quick CTA Buttons -->
-<div class="flex flex-wrap items-center justify-center lg:justify-start gap-space-md pt-space-md">
-<!-- Primary Magenta CTA -->
-<a class="group relative inline-flex items-center gap-2 px-space-lg py-2.5 rounded bg-secondary-container text-on-secondary-container font-code-dense text-code-dense font-bold uppercase tracking-wider transition-all duration-200 hover:scale-[1.02] shadow-[0_0_20px_rgba(192,0,162,0.45)] hover:shadow-[0_0_28px_rgba(255,79,216,0.7)]" href="profile.html">
-<span class="">Explore CV (Get Started)</span>
-<span class="material-symbols-outlined text-[18px] transition-transform group-hover:translate-x-1">arrow_forward</span>
-</a>
-<!-- Secondary Green Action (GitHub Clone / Download style) -->
-<button class="inline-flex items-center gap-2 px-space-md py-2.5 rounded bg-surface-container-high/90 text-tertiary-fixed font-code-dense text-code-dense font-semibold hover:bg-surface-container-highest hover:text-tertiary transition-all shadow-md" id="downloadCv" type="button">
-<span class="material-symbols-outlined text-[18px]">download</span>
-<span class="">Download CV (.zip)</span>
-</button>
-<!-- GitHub Profile Outlink -->
-<a class="inline-flex items-center gap-2 px-space-md py-2.5 rounded bg-surface-container-lowest/80 text-on-surface-variant font-code-dense text-code-dense font-medium hover:text-primary hover:bg-surface-container-high transition-all" href="https://github.com" rel="noopener noreferrer" target="_blank">
-<span class="material-symbols-outlined text-[18px]">code</span>
-<span class="">github.com/profile</span>
-</a>
-</div>
-</div>
-</div>
-</div>
-<!-- Quick Access / VS Code Welcome Recent Files Grid -->
-<div class="space-y-space-md">
-<div class="flex items-center justify-between px-space-xs">
-<div class="flex items-center gap-space-sm">
-<span class="material-symbols-outlined text-[20px] text-primary-container">history</span>
-<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">
-            Recent Files &amp; Workspaces
-          </h2>
-</div>
-<span class="font-code-dense text-code-dense text-outline hidden sm:inline">6 modules mapped</span>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md">
-<!-- Card 1: profile.md -->
-<a class="group block p-space-md rounded-xl bg-surface-container-low/70 hover:bg-surface-container-high/70 transition-all duration-200 shadow-md hover:-translate-y-0.5" href="profile.html">
-<div class="flex items-start justify-between mb-space-sm">
-<div class="flex items-center gap-space-sm">
-<span class="material-symbols-outlined text-[20px] text-primary">description</span>
-<span class="font-title-code text-title-code text-on-surface group-hover:text-primary-container transition-colors">
-                profile.md
-              </span>
-</div>
-<span class="font-code-dense text-code-dense text-outline bg-surface-container-lowest px-2 py-0.5 rounded">
-              142 lines
-            </span>
-</div>
-<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mb-space-sm">
-            Core biographical overview, academic path, and Git / GitHub learning timeline matrix.
-          </p>
-<div class="font-code-dense text-code-dense text-primary-container flex items-center gap-1 group-hover:underline">
-<span class="">Open preview</span>
-<span class="material-symbols-outlined text-[14px]">chevron_right</span>
-</div>
-</a>
-<!-- Card 2: skills.js -->
-<a class="group block p-space-md rounded-xl bg-surface-container-low/70 hover:bg-surface-container-high/70 transition-all duration-200 shadow-md hover:-translate-y-0.5" href="skills.html">
-<div class="flex items-start justify-between mb-space-sm">
-<div class="flex items-center gap-space-sm">
-<span class="material-symbols-outlined text-[20px] text-tertiary">javascript</span>
-<span class="font-title-code text-title-code text-on-surface group-hover:text-tertiary-fixed transition-colors">
-                skills.js
-              </span>
-</div>
-<span class="font-code-dense text-code-dense text-outline bg-surface-container-lowest px-2 py-0.5 rounded">
-              210 lines
-            </span>
-</div>
-<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mb-space-sm">
-            C++, Java, Modern Web Tech stacks, conversational soft skills, and linguistics array.
-          </p>
-<div class="font-code-dense text-code-dense text-tertiary flex items-center gap-1 group-hover:underline">
-<span class="">Inspect exports</span>
-<span class="material-symbols-outlined text-[14px]">chevron_right</span>
-</div>
-</a>
-<!-- Card 3: education.json -->
-<a class="group block p-space-md rounded-xl bg-surface-container-low/70 hover:bg-surface-container-high/70 transition-all duration-200 shadow-md hover:-translate-y-0.5" href="education.html">
-<div class="flex items-start justify-between mb-space-sm">
-<div class="flex items-center gap-space-sm">
-<span class="material-symbols-outlined text-[20px] text-secondary">data_object</span>
-<span class="font-title-code text-title-code text-on-surface group-hover:text-secondary-fixed transition-colors">
-                education.json
-              </span>
-</div>
-<span class="font-code-dense text-code-dense text-outline bg-surface-container-lowest px-2 py-0.5 rounded">
-              88 lines
-            </span>
-</div>
-<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mb-space-sm">
-            Undergraduate Computer Science curriculum, semester progress, and Institute 1 records.
-          </p>
-<div class="font-code-dense text-code-dense text-secondary flex items-center gap-1 group-hover:underline">
-<span class="">Parse schema</span>
-<span class="material-symbols-outlined text-[14px]">chevron_right</span>
-</div>
-</a>
-<!-- Card 4: projects/ -->
-<a class="group block p-space-md rounded-xl bg-surface-container-low/70 hover:bg-surface-container-high/70 transition-all duration-200 shadow-md hover:-translate-y-0.5" href="projects.html">
-<div class="flex items-start justify-between mb-space-sm">
-<div class="flex items-center gap-space-sm">
-<span class="material-symbols-outlined text-[20px] text-primary-container">folder_open</span>
-<span class="font-title-code text-title-code text-on-surface group-hover:text-primary transition-colors">
-                projects/
-              </span>
-</div>
-<span class="font-code-dense text-code-dense text-outline bg-surface-container-lowest px-2 py-0.5 rounded">
-              12 repos
-            </span>
-</div>
-<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mb-space-sm">
-            Digicams Web Technologies lab work, computer vision sandbox, and full-stack repos.
-          </p>
-<div class="font-code-dense text-code-dense text-primary-container flex items-center gap-1 group-hover:underline">
-<span class="">Explore directory</span>
-<span class="material-symbols-outlined text-[14px]">chevron_right</span>
-</div>
-</a>
-<!-- Card 5: certifications.md -->
-<a class="group block p-space-md rounded-xl bg-surface-container-low/70 hover:bg-surface-container-high/70 transition-all duration-200 shadow-md hover:-translate-y-0.5" href="certifications.html">
-<div class="flex items-start justify-between mb-space-sm">
-<div class="flex items-center gap-space-sm">
-<span class="material-symbols-outlined text-[20px] text-tertiary-fixed">verified</span>
-<span class="font-title-code text-title-code text-on-surface group-hover:text-tertiary-fixed-dim transition-colors">
-                certifications.md
-              </span>
-</div>
-<span class="font-code-dense text-code-dense text-outline bg-surface-container-lowest px-2 py-0.5 rounded">
-              64 lines
-            </span>
-</div>
-<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mb-space-sm">
-            Coursera Google AI, Google AI Essentials certification badges, and verified credentials.
-          </p>
-<div class="font-code-dense text-code-dense text-tertiary-fixed flex items-center gap-1 group-hover:underline">
-<span class="">Verify tokens</span>
-<span class="material-symbols-outlined text-[14px]">chevron_right</span>
-</div>
-</a>
-<!-- Card 6: contact.sh -->
-<a class="group block p-space-md rounded-xl bg-surface-container-low/70 hover:bg-surface-container-high/70 transition-all duration-200 shadow-md hover:-translate-y-0.5" href="contact.html">
-<div class="flex items-start justify-between mb-space-sm">
-<div class="flex items-center gap-space-sm">
-<span class="material-symbols-outlined text-[20px] text-secondary-fixed">terminal</span>
-<span class="font-title-code text-title-code text-on-surface group-hover:text-secondary-fixed transition-colors">
-                contact.sh
-              </span>
-</div>
-<span class="font-code-dense text-code-dense text-outline bg-surface-container-lowest px-2 py-0.5 rounded">
-              EXEC
-            </span>
-</div>
-<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mb-space-sm">
-            Direct channels: meow@gmail.com, mobile dialer 0123-4567899, and secure shell endpoints.
-          </p>
-<div class="font-code-dense text-code-dense text-secondary-fixed flex items-center gap-1 group-hover:underline">
-<span class="">Run script</span>
-<span class="material-symbols-outlined text-[14px]">chevron_right</span>
-</div>
-</a>
-</div>
-</div>
-<!-- Live Mini Neofetch Terminal Dashboard -->
-<div class="rounded-xl overflow-hidden bg-surface-container-lowest/90 backdrop-blur-md shadow-2xl p-space-md sm:p-space-lg">
-<div class="flex items-center justify-between pb-space-sm mb-space-md">
-<div class="flex items-center gap-space-sm font-code-dense text-code-dense">
-<div class="flex items-center gap-1.5">
-<span class="w-2.5 h-2.5 rounded-full bg-error inline-block"></span>
-<span class="w-2.5 h-2.5 rounded-full bg-[#FFBD2E] inline-block"></span>
-<span class="w-2.5 h-2.5 rounded-full bg-tertiary-fixed inline-block"></span>
-</div>
-<span class="text-outline text-label-sm font-label-sm uppercase ml-1">interactive-session // zsh</span>
-</div>
-<div class="font-code-dense text-code-dense text-on-surface-variant flex items-center gap-1">
-<span class="material-symbols-outlined text-[14px] text-tertiary-fixed">memory</span>
-<span class="">RAM: 3.4GB / 16GB</span>
-</div>
-</div>
-<!-- Neofetch Display Layout -->
-<div class="grid grid-cols-1 md:grid-cols-12 gap-space-lg items-center">
-<!-- ASCII / Neon Icon Emblem -->
-<div class="md:col-span-4 flex flex-col items-center justify-center p-space-md rounded bg-surface-container-low/60 text-center">
-<div class="text-primary-container font-code-dense text-code-dense leading-none select-none">
-<pre class="font-code-dense text-[10px] sm:text-[11px] leading-tight text-primary-container text-left inline-block">    /\_____/\
+<!doctype html>
+<html class="dark" lang="en">
+  <head>
+    <title>Wajeeha Attique | Galaxy Terminal</title>
+    <meta
+      content="Wajeeha Attique — Computer Science student exploring AI."
+      name="description"
+    />
+    <link href="style.css" rel="stylesheet" />
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="web_dashboard" name="shell-type" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @layer base {
+        html,
+        body {
+          margin: 0;
+          padding: 0;
+        }
+        body {
+          overscroll-behavior: none;
+        }
+        main > :first-child {
+          margin-top: 0 !important;
+        }
+        main > :last-child {
+          margin-bottom: 0 !important;
+        }
+      }
+      ::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-on-surface": "#2b2f45",
+              "on-background": "#dee1fd",
+              "on-secondary-container": "#ffe0f0",
+              surface: "#0e1226",
+              "on-primary-fixed-variant": "#004f58",
+              outline: "#849396",
+              "surface-container": "#1a1e33",
+              "on-secondary-fixed": "#3a0030",
+              "on-error-container": "#ffdad6",
+              "on-error": "#690005",
+              "tertiary-fixed": "#aff833",
+              "primary-container": "#00e5ff",
+              "surface-container-lowest": "#090d21",
+              "tertiary-container": "#9ee51b",
+              "inverse-primary": "#006875",
+              "surface-dim": "#0e1226",
+              "on-surface-variant": "#bac9cc",
+              "surface-bright": "#34384e",
+              "inverse-surface": "#dee1fd",
+              "primary-fixed-dim": "#00daf3",
+              "secondary-container": "#c000a2",
+              "surface-container-highest": "#303449",
+              "on-secondary-fixed-variant": "#860070",
+              "on-tertiary": "#223600",
+              "surface-container-low": "#161a2f",
+              primary: "#c3f5ff",
+              "on-primary-fixed": "#001f24",
+              tertiary: "#c5ff6b",
+              "outline-variant": "#3b494c",
+              "on-primary-container": "#00626e",
+              "primary-fixed": "#9cf0ff",
+              "on-tertiary-container": "#416300",
+              "on-primary": "#00363d",
+              "on-secondary": "#5f004f",
+              error: "#ffb4ab",
+              "surface-container-high": "#25293e",
+              "surface-tint": "#00daf3",
+              "tertiary-fixed-dim": "#95da03",
+              "on-surface": "#dee1fd",
+              background: "#0e1226",
+              "surface-variant": "#303449",
+              "secondary-fixed-dim": "#ffade3",
+              secondary: "#ffade3",
+              "secondary-fixed": "#ffd8ee",
+              "on-tertiary-fixed-variant": "#334f00",
+              "on-tertiary-fixed": "#121f00",
+              "error-container": "#93000a",
+            },
+            borderRadius: {
+              DEFAULT: "0.125rem",
+              lg: "0.25rem",
+              xl: "0.5rem",
+              full: "0.75rem",
+            },
+            spacing: {
+              "margin-desktop": "3rem",
+              "space-2xl": "4rem",
+              margin: "1rem",
+              "space-lg": "1.5rem",
+              "space-xs": "0.25rem",
+              "space-sm": "0.5rem",
+              "margin-tablet": "2rem",
+              "space-xl": "2.5rem",
+              "space-md": "1rem",
+              gutter: "1rem",
+              "gutter-desktop": "1.5rem",
+            },
+            fontFamily: {
+              "code-dense": ["JetBrains Mono"],
+              "headline-md": ["Space Grotesk"],
+              "headline-lg": ["Space Grotesk"],
+              "label-md": ["JetBrains Mono"],
+              "display-xl": ["Space Grotesk"],
+              "body-md": ["JetBrains Mono"],
+              "headline-lg-mobile": ["Space Grotesk"],
+              "body-sm": ["JetBrains Mono"],
+              "label-sm": ["JetBrains Mono"],
+              "display-xl-mobile": ["Space Grotesk"],
+              "headline-sm": ["Space Grotesk"],
+              "body-lg": ["JetBrains Mono"],
+              "title-code": ["JetBrains Mono"],
+            },
+            fontSize: {
+              "code-dense": [
+                "12px",
+                { lineHeight: "16px", letterSpacing: "0em", fontWeight: "400" },
+              ],
+              "headline-md": [
+                "28px",
+                {
+                  lineHeight: "36px",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "600",
+                },
+              ],
+              "headline-lg": [
+                "40px",
+                {
+                  lineHeight: "48px",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "600",
+                },
+              ],
+              "label-md": [
+                "13px",
+                {
+                  lineHeight: "16px",
+                  letterSpacing: "0.04em",
+                  fontWeight: "500",
+                },
+              ],
+              "display-xl": [
+                "56px",
+                {
+                  lineHeight: "64px",
+                  letterSpacing: "-0.03em",
+                  fontWeight: "700",
+                },
+              ],
+              "body-md": [
+                "14px",
+                { lineHeight: "22px", letterSpacing: "0em", fontWeight: "400" },
+              ],
+              "headline-lg-mobile": [
+                "28px",
+                {
+                  lineHeight: "36px",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "600",
+                },
+              ],
+              "body-sm": [
+                "12px",
+                {
+                  lineHeight: "18px",
+                  letterSpacing: "0.01em",
+                  fontWeight: "400",
+                },
+              ],
+              "label-sm": [
+                "11px",
+                {
+                  lineHeight: "14px",
+                  letterSpacing: "0.06em",
+                  fontWeight: "500",
+                },
+              ],
+              "display-xl-mobile": [
+                "36px",
+                {
+                  lineHeight: "44px",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "700",
+                },
+              ],
+              "headline-sm": [
+                "20px",
+                { lineHeight: "28px", letterSpacing: "0em", fontWeight: "600" },
+              ],
+              "body-lg": [
+                "16px",
+                {
+                  lineHeight: "26px",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "400",
+                },
+              ],
+              "title-code": [
+                "16px",
+                {
+                  lineHeight: "24px",
+                  letterSpacing: "0.02em",
+                  fontWeight: "600",
+                },
+              ],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="bg-background font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen relative flex flex-col"
+  >
+    <div class="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
+      <div
+        class="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-secondary-container/15 blur-[120px]"
+      ></div>
+      <div
+        class="absolute top-1/3 -right-32 w-[32rem] h-[32rem] rounded-full bg-primary-container/10 blur-[140px]"
+      ></div>
+      <div
+        class="absolute -bottom-20 left-1/4 w-[28rem] h-[28rem] rounded-full bg-tertiary-container/10 blur-[130px]"
+      ></div>
+    </div>
+    <header
+      class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/80 backdrop-blur-xl"
+    >
+      <div class="h-10 w-full px-space-md flex items-center justify-between">
+        <div class="flex items-center gap-space-sm w-48">
+          <div class="flex items-center gap-1.5">
+            <span class="w-3 h-3 rounded-full bg-error inline-block"></span
+            ><span class="w-3 h-3 rounded-full bg-[#FFBD2E] inline-block"></span
+            ><span
+              class="w-3 h-3 rounded-full bg-tertiary-fixed inline-block"
+            ></span>
+          </div>
+          <span
+            class="ml-space-sm font-label-sm text-label-sm text-outline hidden sm:inline tracking-wider uppercase"
+            >IDE v2.4</span
+          >
+        </div>
+        <div class="flex-1 flex items-center justify-center">
+          <div
+            class="flex items-center gap-space-xs px-space-md py-0.5 rounded bg-surface-container/60 font-code-dense text-code-dense text-on-surface-variant"
+          >
+            <span class="text-primary-container">~/developer/cv</span
+            ><span class="text-outline">-</span
+            ><span class="text-on-surface font-medium">Galaxy Terminal</span>
+          </div>
+        </div>
+        <div class="flex items-center justify-end gap-space-md w-48">
+          <span
+            class="font-label-sm text-label-sm text-primary font-medium hidden md:inline tracking-wider"
+            >SYS_NOMINAL</span
+          ><img
+            alt="Profile"
+            class="w-7 h-7 rounded-full object-cover ring-1 ring-primary-container/40"
+            src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20200%20200%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20stop-color%3D%22%23a78bfa%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23ec4899%22/%3E%3C/linearGradient%3E%3CradialGradient%20id%3D%22b%22%3E%3Cstop%20stop-color%3D%22%2327204e%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23080d22%22/%3E%3C/radialGradient%3E%3C/defs%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%22100%22%20r%3D%2298%22%20fill%3D%22url%28%23b%29%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%22100%22%20r%3D%2294%22%20fill%3D%22none%22%20stroke%3D%22%2300e5ff%22%20stroke-width%3D%223%22/%3E%3Cpath%20d%3D%22M42%20200c2-40%2023-62%2058-62s56%2022%2058%2062%22%20fill%3D%22url%28%23g%29%22/%3E%3Cpath%20d%3D%22M54%2094c-7-45%2013-70%2046-70s54%2025%2046%2070l-4%2048c-9%2018-25%2026-42%2026s-33-8-42-26z%22%20fill%3D%22url%28%23g%29%22/%3E%3Cellipse%20cx%3D%22100%22%20cy%3D%2291%22%20rx%3D%2234%22%20ry%3D%2243%22%20fill%3D%22%23d7b7ff%22/%3E%3Cpath%20d%3D%22M64%2083c-4-35%2015-54%2039-54%2026%200%2041%2020%2035%2051-13-2-28-15-34-26-8%2017-23%2025-40%2029z%22%20fill%3D%22url%28%23g%29%22/%3E%3Cpath%20d%3D%22M61%2085c-3%2024%201%2049%2013%2064l-7-1c-20-20-22-54-6-75zM139%2080c9%2025%202%2055-13%2070l9-2c18-22%2018-52%204-73z%22%20fill%3D%22url%28%23g%29%22/%3E%3C/svg%3E"
+          />
+        </div>
+      </div>
+    </header>
+    <aside
+      class="fixed left-0 top-10 bottom-7 w-12 bg-surface-container-lowest flex flex-col items-center py-space-sm justify-between z-40"
+    >
+      <div class="flex flex-col items-center gap-space-sm w-full">
+        <button
+          class="w-10 h-10 flex items-center justify-center rounded text-primary-container bg-surface-container-high/60 transition-colors"
+          title="Explorer"
+          type="button"
+        >
+          <span class="material-symbols-outlined text-[20px]"
+            >folder</span
+          ></button
+        ><button
+          class="w-10 h-10 flex items-center justify-center rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors"
+          title="Search"
+          type="button"
+        >
+          <span class="material-symbols-outlined text-[20px]"
+            >search</span
+          ></button
+        ><button
+          class="w-10 h-10 flex items-center justify-center rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors"
+          title="Source Control"
+          type="button"
+        >
+          <span class="material-symbols-outlined text-[20px]"
+            >alt_route</span
+          ></button
+        ><button
+          class="w-10 h-10 flex items-center justify-center rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors"
+          title="Run and Debug"
+          type="button"
+        >
+          <span class="material-symbols-outlined text-[20px]"
+            >play_arrow</span
+          ></button
+        ><button
+          class="w-10 h-10 flex items-center justify-center rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors"
+          title="Extensions"
+          type="button"
+        >
+          <span class="material-symbols-outlined text-[20px]">extension</span>
+        </button>
+      </div>
+      <div class="flex flex-col items-center gap-space-xs w-full">
+        <button
+          class="w-10 h-10 flex items-center justify-center rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors"
+          title="Terminal Console"
+          type="button"
+        >
+          <span class="material-symbols-outlined text-[20px]"
+            >terminal</span
+          ></button
+        ><button
+          class="w-10 h-10 flex items-center justify-center rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors"
+          title="Preferences"
+          type="button"
+        >
+          <span class="material-symbols-outlined text-[20px]">settings</span>
+        </button>
+      </div>
+    </aside>
+    <aside
+      class="fixed left-12 top-10 bottom-7 w-60 bg-surface-container-low/90 backdrop-blur-md flex flex-col z-30"
+    >
+      <div
+        class="h-9 px-space-md flex items-center justify-between bg-surface-container-low"
+      >
+        <span
+          class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold"
+          >EXPLORER : CV_WORKSPACE</span
+        ><span
+          class="material-symbols-outlined text-[16px] text-outline hover:text-on-surface cursor-pointer"
+          >more_horiz</span
+        >
+      </div>
+      <div class="px-space-sm py-1">
+        <div
+          class="flex items-center gap-1 px-space-xs py-1 text-on-surface-variant font-label-sm text-label-sm font-semibold tracking-wide uppercase"
+        >
+          <span class="material-symbols-outlined text-[14px]">expand_more</span
+          ><span class="">GALAXY-TERMINAL</span>
+        </div>
+      </div>
+      <nav
+        class="flex-1 flex flex-col px-space-sm gap-0.5 overflow-y-auto"
+        data-active-classes="bg-surface-container-highest text-primary-container font-semibold"
+      >
+        <a
+          class="flex items-center gap-space-sm px-space-sm py-1.5 rounded font-code-dense text-code-dense text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all"
+          data-path="profile-md"
+          href="profile.html"
+          ><span class="material-symbols-outlined text-[15px] text-primary"
+            >description</span
+          ><span class="">profile.md</span></a
+        ><a
+          class="flex items-center gap-space-sm px-space-sm py-1.5 rounded font-code-dense text-code-dense text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all"
+          data-path="skills-js"
+          href="skills.html"
+          ><span class="material-symbols-outlined text-[15px] text-tertiary"
+            >javascript</span
+          ><span class="">skills.js</span></a
+        ><a
+          class="flex items-center gap-space-sm px-space-sm py-1.5 rounded font-code-dense text-code-dense text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all"
+          data-path="languages-json"
+          href="languages.html"
+          ><span class="material-symbols-outlined text-[15px] text-secondary"
+            >data_object</span
+          ><span class="">languages.json</span></a
+        ><a
+          class="flex items-center gap-space-sm px-space-sm py-1.5 rounded font-code-dense text-code-dense text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all"
+          data-path="education-json"
+          href="education.html"
+          ><span class="material-symbols-outlined text-[15px] text-secondary"
+            >data_object</span
+          ><span class="">education.json</span></a
+        ><a
+          class="flex items-center gap-space-sm px-space-sm py-1.5 rounded font-code-dense text-code-dense text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all"
+          data-path="projects"
+          href="projects.html"
+          ><span
+            class="material-symbols-outlined text-[15px] text-primary-container"
+            >folder_open</span
+          ><span class="">projects/</span></a
+        ><a
+          class="flex items-center gap-space-sm px-space-sm py-1.5 rounded font-code-dense text-code-dense text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all"
+          data-path="certifications-md"
+          href="certifications.html"
+          ><span class="material-symbols-outlined text-[15px] text-primary"
+            >verified</span
+          ><span class="">certifications.md</span></a
+        ><a
+          class="flex items-center gap-space-sm px-space-sm py-1.5 rounded font-code-dense text-code-dense text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all"
+          data-path="contact-sh"
+          href="contact.html"
+          ><span
+            class="material-symbols-outlined text-[15px] text-tertiary-fixed"
+            >terminal</span
+          ><span class="">contact.sh</span></a
+        >
+      </nav>
+      <div class="p-space-sm m-space-sm rounded bg-surface-container/70">
+        <div class="flex items-center justify-between mb-1">
+          <span class="font-label-sm text-label-sm text-outline uppercase"
+            >CORE_METRICS</span
+          ><span
+            class="font-label-sm text-label-sm text-tertiary-fixed font-bold"
+            >99.8%</span
+          >
+        </div>
+        <div
+          class="w-full h-1 bg-surface-container-lowest rounded-full overflow-hidden"
+        >
+          <div class="h-full w-4/5 bg-primary-container"></div>
+        </div>
+      </div>
+    </aside>
+    <div class="pl-72 flex flex-col flex-1">
+      <div
+        class="fixed top-10 left-72 right-0 h-10 bg-surface-container/70 backdrop-blur-md z-20 flex items-center overflow-x-auto px-space-sm gap-1"
+      >
+        <div
+          class="flex items-center h-8 px-space-md gap-space-sm rounded-t bg-surface text-primary-container font-code-dense text-code-dense font-medium shadow-[0_-1px_0_0_#00e5ff_inset]"
+        >
+          <span class="material-symbols-outlined text-[15px] text-primary"
+            >description</span
+          ><a href="profile.html"><span class="">profile.md</span
+          ></a><span
+            class="material-symbols-outlined text-[13px] text-outline hover:text-on-surface cursor-pointer ml-1"
+            >close</span
+          >
+        </div>
+        <div
+          class="flex items-center h-8 px-space-md gap-space-sm rounded-t text-on-surface-variant hover:bg-surface-container-high/50 font-code-dense text-code-dense cursor-pointer transition-colors"
+        >
+          <span class="material-symbols-outlined text-[15px] text-tertiary"
+            >javascript</span
+          ><a href="skills.html"><span class="">skills.js</span></a>
+        </div>
+        <div
+          class="flex items-center h-8 px-space-md gap-space-sm rounded-t text-on-surface-variant hover:bg-surface-container-high/50 font-code-dense text-code-dense cursor-pointer transition-colors"
+        >
+          <span
+            class="material-symbols-outlined text-[15px] text-primary-container"
+            >folder_open</span
+          ><a href="projects.html"><span class="">projects/</span></a>
+        </div>
+        <div
+          class="flex items-center h-8 px-space-md gap-space-sm rounded-t text-on-surface-variant hover:bg-surface-container-high/50 font-code-dense text-code-dense cursor-pointer transition-colors"
+        >
+          <span
+            class="material-symbols-outlined text-[15px] text-tertiary-fixed"
+            >terminal</span
+          ><a href="contact.html"><span class="">contact.sh</span></a>
+        </div>
+      </div>
+      <main
+        class="relative pt-20 pb-44 w-full px-space-md bg-surface/40 min-h-screen"
+      >
+        <div class="flex flex-col w-full">
+          <div class="relative w-full max-w-6xl mx-auto space-y-space-xl">
+            <!-- Hero / Welcome Command Center Banner -->
+            <div
+              class="relative overflow-hidden rounded-xl bg-surface-container-low/80 backdrop-blur-xl shadow-2xl p-space-lg sm:p-space-xl"
+            >
+              <!-- Ambient Cosmic Glow Spots -->
+              <div
+                class="absolute -top-24 -right-24 w-80 h-80 rounded-full bg-secondary-container/20 blur-[100px] pointer-events-none"
+              ></div>
+              <div
+                class="absolute -bottom-24 -left-24 w-80 h-80 rounded-full bg-primary-container/15 blur-[110px] pointer-events-none"
+              ></div>
+              <!-- Top Meta Breadcrumb bar -->
+              <div
+                class="flex items-center justify-between pb-space-md mb-space-lg"
+              >
+                <div
+                  class="flex items-center gap-space-sm font-code-dense text-code-dense text-outline"
+                >
+                  <span
+                    class="material-symbols-outlined text-[16px] text-primary-container"
+                    >terminal</span
+                  >
+                  <span class="">workspace</span>
+                  <span class="">/</span>
+                  <span class="text-on-surface">welcome.tsx</span>
+                  <span
+                    class="px-1.5 py-0.5 rounded bg-surface-container-highest/60 text-label-sm font-label-sm text-tertiary"
+                    >READY</span
+                  >
+                </div>
+                <div class="flex items-center gap-2">
+                  <span
+                    class="w-2 h-2 rounded-full bg-tertiary-fixed animate-ping"
+                  ></span>
+                  <span
+                    class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest hidden sm:inline"
+                    >KERNEL_STABLE</span
+                  >
+                </div>
+              </div>
+              <!-- Main Profile & Identity Split -->
+              <div
+                class="flex flex-col lg:flex-row items-center lg:items-start gap-space-xl"
+              >
+                <!-- Avatar Block -->
+                <div class="relative flex-shrink-0 group">
+                  <div
+                    class="absolute -inset-1 rounded-full bg-gradient-to-r from-primary-container via-secondary-container to-tertiary-fixed opacity-70 blur-md group-hover:opacity-100 transition-opacity"
+                  ></div>
+                  <div
+                    class="relative w-36 h-36 sm:w-44 sm:h-44 rounded-full overflow-hidden bg-surface-container-lowest p-1 shadow-2xl"
+                  >
+                    <img
+                      alt="Minimalist Silhouette Avatar with Flowing Hair"
+                      class="w-full h-full object-cover rounded-full"
+                      src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20200%20200%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20stop-color%3D%22%23a78bfa%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23ec4899%22/%3E%3C/linearGradient%3E%3CradialGradient%20id%3D%22b%22%3E%3Cstop%20stop-color%3D%22%2327204e%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23080d22%22/%3E%3C/radialGradient%3E%3C/defs%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%22100%22%20r%3D%2298%22%20fill%3D%22url%28%23b%29%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%22100%22%20r%3D%2294%22%20fill%3D%22none%22%20stroke%3D%22%2300e5ff%22%20stroke-width%3D%223%22/%3E%3Cpath%20d%3D%22M42%20200c2-40%2023-62%2058-62s56%2022%2058%2062%22%20fill%3D%22url%28%23g%29%22/%3E%3Cpath%20d%3D%22M54%2094c-7-45%2013-70%2046-70s54%2025%2046%2070l-4%2048c-9%2018-25%2026-42%2026s-33-8-42-26z%22%20fill%3D%22url%28%23g%29%22/%3E%3Cellipse%20cx%3D%22100%22%20cy%3D%2291%22%20rx%3D%2234%22%20ry%3D%2243%22%20fill%3D%22%23d7b7ff%22/%3E%3Cpath%20d%3D%22M64%2083c-4-35%2015-54%2039-54%2026%200%2041%2020%2035%2051-13-2-28-15-34-26-8%2017-23%2025-40%2029z%22%20fill%3D%22url%28%23g%29%22/%3E%3Cpath%20d%3D%22M61%2085c-3%2024%201%2049%2013%2064l-7-1c-20-20-22-54-6-75zM139%2080c9%2025%202%2055-13%2070l9-2c18-22%2018-52%204-73z%22%20fill%3D%22url%28%23g%29%22/%3E%3C/svg%3E"
+                    />
+                  </div>
+                  <div
+                    class="absolute bottom-1 right-2 bg-surface-container-lowest px-2 py-0.5 rounded-full flex items-center gap-1 shadow-lg"
+                  >
+                    <span
+                      class="w-2.5 h-2.5 rounded-full bg-tertiary-fixed"
+                    ></span>
+                    <span
+                      class="font-label-sm text-label-sm text-tertiary-fixed font-bold"
+                      >ONLINE</span
+                    >
+                  </div>
+                </div>
+                <!-- Typography & Bio Details -->
+                <div class="flex-1 text-center lg:text-left space-y-space-sm">
+                  <div
+                    class="flex flex-wrap items-center justify-center lg:justify-start gap-space-xs mb-1"
+                  >
+                    <span
+                      class="px-2.5 py-0.5 rounded font-label-sm text-label-sm bg-secondary-container/30 text-secondary-fixed font-semibold tracking-wider uppercase"
+                    >
+                      CS Student
+                    </span>
+                    <span
+                      class="px-2.5 py-0.5 rounded font-label-sm text-label-sm bg-primary-container/20 text-primary font-semibold tracking-wider uppercase"
+                    >
+                      AI Enthusiast
+                    </span>
+                    <span
+                      class="px-2.5 py-0.5 rounded font-label-sm text-label-sm bg-surface-container-highest/80 text-on-surface-variant font-medium tracking-wider uppercase"
+                    >
+                      5th Semester
+                    </span>
+                  </div>
+                  <!-- Dynamic Title with Neon Glow & Cursor -->
+                  <div class="inline-flex items-center gap-2">
+                    <h1
+                      class="font-display-xl text-display-xl text-primary font-bold tracking-tight drop-shadow-[0_0_20px_rgba(0,229,255,0.45)]"
+                    >
+                      Wajeeha Attique
+                    </h1>
+                    <span
+                      class="w-3 h-10 sm:h-12 bg-primary-container inline-block animate-pulse align-middle"
+                    ></span>
+                  </div>
+                  <p
+                    class="font-headline-sm text-headline-sm text-on-surface font-medium"
+                  >
+                    CS Student | AI Enthusiast
+                  </p>
+                  <p class="font-body-md text-body-md text-outline max-w-2xl">
+                    5th Semester Computer Science Student • Open to AI
+                    Opportunities. Exploring deep neural systems, reactive
+                    terminal architectures, and distributed systems tooling.
+                  </p>
+                  <!-- Action Matrix / Quick CTA Buttons -->
+                  <div
+                    class="flex flex-wrap items-center justify-center lg:justify-start gap-space-md pt-space-md"
+                  >
+                    <!-- Primary Magenta CTA -->
+                    <a
+                      class="group relative inline-flex items-center gap-2 px-space-lg py-2.5 rounded bg-secondary-container text-on-secondary-container font-code-dense text-code-dense font-bold uppercase tracking-wider transition-all duration-200 hover:scale-[1.02] shadow-[0_0_20px_rgba(192,0,162,0.45)] hover:shadow-[0_0_28px_rgba(255,79,216,0.7)]"
+                      href="profile.html"
+                    >
+                      <span class="">Explore CV (Get Started)</span>
+                      <span
+                        class="material-symbols-outlined text-[18px] transition-transform group-hover:translate-x-1"
+                        >arrow_forward</span
+                      >
+                    </a>
+                    <!-- Secondary Green Action (GitHub Clone / Download style) -->
+                    <button
+                      class="inline-flex items-center gap-2 px-space-md py-2.5 rounded bg-surface-container-high/90 text-tertiary-fixed font-code-dense text-code-dense font-semibold hover:bg-surface-container-highest hover:text-tertiary transition-all shadow-md"
+                      id="downloadCv"
+                      type="button"
+                    >
+                      <span class="material-symbols-outlined text-[18px]"
+                        >download</span
+                      >
+                      <span class="">Download CV (.zip)</span>
+                    </button>
+                    <!-- GitHub Profile Outlink -->
+                    <a
+                      class="inline-flex items-center gap-2 px-space-md py-2.5 rounded bg-surface-container-lowest/80 text-on-surface-variant font-code-dense text-code-dense font-medium hover:text-primary hover:bg-surface-container-high transition-all"
+                      href="https://github.com"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      <span class="material-symbols-outlined text-[18px]"
+                        >code</span
+                      >
+                      <span class="">github.com/profile</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Quick Access / VS Code Welcome Recent Files Grid -->
+            <div class="space-y-space-md">
+              <div class="flex items-center justify-between px-space-xs">
+                <div class="flex items-center gap-space-sm">
+                  <span
+                    class="material-symbols-outlined text-[20px] text-primary-container"
+                    >history</span
+                  >
+                  <h2
+                    class="font-headline-sm text-headline-sm text-on-surface font-semibold"
+                  >
+                    Recent Files &amp; Workspaces
+                  </h2>
+                </div>
+                <span
+                  class="font-code-dense text-code-dense text-outline hidden sm:inline"
+                  >6 modules mapped</span
+                >
+              </div>
+              <div
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md"
+              >
+                <!-- Card 1: profile.md -->
+                <a
+                  class="group block p-space-md rounded-xl bg-surface-container-low/70 hover:bg-surface-container-high/70 transition-all duration-200 shadow-md hover:-translate-y-0.5"
+                  href="profile.html"
+                >
+                  <div class="flex items-start justify-between mb-space-sm">
+                    <div class="flex items-center gap-space-sm">
+                      <span
+                        class="material-symbols-outlined text-[20px] text-primary"
+                        >description</span
+                      >
+                      <span
+                        class="font-title-code text-title-code text-on-surface group-hover:text-primary-container transition-colors"
+                      >
+                        profile.md
+                      </span>
+                    </div>
+                    <span
+                      class="font-code-dense text-code-dense text-outline bg-surface-container-lowest px-2 py-0.5 rounded"
+                    >
+                      142 lines
+                    </span>
+                  </div>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mb-space-sm"
+                  >
+                    Core biographical overview, academic path, and Git / GitHub
+                    learning timeline matrix.
+                  </p>
+                  <div
+                    class="font-code-dense text-code-dense text-primary-container flex items-center gap-1 group-hover:underline"
+                  >
+                    <span class="">Open preview</span>
+                    <span class="material-symbols-outlined text-[14px]"
+                      >chevron_right</span
+                    >
+                  </div>
+                </a>
+                <!-- Card 2: skills.js -->
+                <a
+                  class="group block p-space-md rounded-xl bg-surface-container-low/70 hover:bg-surface-container-high/70 transition-all duration-200 shadow-md hover:-translate-y-0.5"
+                  href="skills.html"
+                >
+                  <div class="flex items-start justify-between mb-space-sm">
+                    <div class="flex items-center gap-space-sm">
+                      <span
+                        class="material-symbols-outlined text-[20px] text-tertiary"
+                        >javascript</span
+                      >
+                      <span
+                        class="font-title-code text-title-code text-on-surface group-hover:text-tertiary-fixed transition-colors"
+                      >
+                        skills.js
+                      </span>
+                    </div>
+                    <span
+                      class="font-code-dense text-code-dense text-outline bg-surface-container-lowest px-2 py-0.5 rounded"
+                    >
+                      210 lines
+                    </span>
+                  </div>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mb-space-sm"
+                  >
+                    C++, Java, Modern Web Tech stacks, conversational soft
+                    skills, and linguistics array.
+                  </p>
+                  <div
+                    class="font-code-dense text-code-dense text-tertiary flex items-center gap-1 group-hover:underline"
+                  >
+                    <span class="">Inspect exports</span>
+                    <span class="material-symbols-outlined text-[14px]"
+                      >chevron_right</span
+                    >
+                  </div>
+                </a>
+                <!-- Card 3: education.json -->
+                <a
+                  class="group block p-space-md rounded-xl bg-surface-container-low/70 hover:bg-surface-container-high/70 transition-all duration-200 shadow-md hover:-translate-y-0.5"
+                  href="education.html"
+                >
+                  <div class="flex items-start justify-between mb-space-sm">
+                    <div class="flex items-center gap-space-sm">
+                      <span
+                        class="material-symbols-outlined text-[20px] text-secondary"
+                        >data_object</span
+                      >
+                      <span
+                        class="font-title-code text-title-code text-on-surface group-hover:text-secondary-fixed transition-colors"
+                      >
+                        education.json
+                      </span>
+                    </div>
+                    <span
+                      class="font-code-dense text-code-dense text-outline bg-surface-container-lowest px-2 py-0.5 rounded"
+                    >
+                      88 lines
+                    </span>
+                  </div>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mb-space-sm"
+                  >
+                    Undergraduate Computer Science curriculum, semester
+                    progress, and Institute 1 records.
+                  </p>
+                  <div
+                    class="font-code-dense text-code-dense text-secondary flex items-center gap-1 group-hover:underline"
+                  >
+                    <span class="">Parse schema</span>
+                    <span class="material-symbols-outlined text-[14px]"
+                      >chevron_right</span
+                    >
+                  </div>
+                </a>
+                <!-- Card 4: projects/ -->
+                <a
+                  class="group block p-space-md rounded-xl bg-surface-container-low/70 hover:bg-surface-container-high/70 transition-all duration-200 shadow-md hover:-translate-y-0.5"
+                  href="projects.html"
+                >
+                  <div class="flex items-start justify-between mb-space-sm">
+                    <div class="flex items-center gap-space-sm">
+                      <span
+                        class="material-symbols-outlined text-[20px] text-primary-container"
+                        >folder_open</span
+                      >
+                      <span
+                        class="font-title-code text-title-code text-on-surface group-hover:text-primary transition-colors"
+                      >
+                        projects/
+                      </span>
+                    </div>
+                    <span
+                      class="font-code-dense text-code-dense text-outline bg-surface-container-lowest px-2 py-0.5 rounded"
+                    >
+                      12 repos
+                    </span>
+                  </div>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mb-space-sm"
+                  >
+                    Digicams Web Technologies lab work, computer vision sandbox,
+                    and full-stack repos.
+                  </p>
+                  <div
+                    class="font-code-dense text-code-dense text-primary-container flex items-center gap-1 group-hover:underline"
+                  >
+                    <span class="">Explore directory</span>
+                    <span class="material-symbols-outlined text-[14px]"
+                      >chevron_right</span
+                    >
+                  </div>
+                </a>
+                <!-- Card 5: certifications.md -->
+                <a
+                  class="group block p-space-md rounded-xl bg-surface-container-low/70 hover:bg-surface-container-high/70 transition-all duration-200 shadow-md hover:-translate-y-0.5"
+                  href="certifications.html"
+                >
+                  <div class="flex items-start justify-between mb-space-sm">
+                    <div class="flex items-center gap-space-sm">
+                      <span
+                        class="material-symbols-outlined text-[20px] text-tertiary-fixed"
+                        >verified</span
+                      >
+                      <span
+                        class="font-title-code text-title-code text-on-surface group-hover:text-tertiary-fixed-dim transition-colors"
+                      >
+                        certifications.md
+                      </span>
+                    </div>
+                    <span
+                      class="font-code-dense text-code-dense text-outline bg-surface-container-lowest px-2 py-0.5 rounded"
+                    >
+                      64 lines
+                    </span>
+                  </div>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mb-space-sm"
+                  >
+                    Coursera Google AI, Google AI Essentials certification
+                    badges, and verified credentials.
+                  </p>
+                  <div
+                    class="font-code-dense text-code-dense text-tertiary-fixed flex items-center gap-1 group-hover:underline"
+                  >
+                    <span class="">Verify tokens</span>
+                    <span class="material-symbols-outlined text-[14px]"
+                      >chevron_right</span
+                    >
+                  </div>
+                </a>
+                <!-- Card 6: contact.sh -->
+                <a
+                  class="group block p-space-md rounded-xl bg-surface-container-low/70 hover:bg-surface-container-high/70 transition-all duration-200 shadow-md hover:-translate-y-0.5"
+                  href="contact.html"
+                >
+                  <div class="flex items-start justify-between mb-space-sm">
+                    <div class="flex items-center gap-space-sm">
+                      <span
+                        class="material-symbols-outlined text-[20px] text-secondary-fixed"
+                        >terminal</span
+                      >
+                      <span
+                        class="font-title-code text-title-code text-on-surface group-hover:text-secondary-fixed transition-colors"
+                      >
+                        contact.sh
+                      </span>
+                    </div>
+                    <span
+                      class="font-code-dense text-code-dense text-outline bg-surface-container-lowest px-2 py-0.5 rounded"
+                    >
+                      EXEC
+                    </span>
+                  </div>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mb-space-sm"
+                  >
+                    Direct channels: meow@gmail.com, mobile dialer 0123-4567899,
+                    and secure shell endpoints.
+                  </p>
+                  <div
+                    class="font-code-dense text-code-dense text-secondary-fixed flex items-center gap-1 group-hover:underline"
+                  >
+                    <span class="">Run script</span>
+                    <span class="material-symbols-outlined text-[14px]"
+                      >chevron_right</span
+                    >
+                  </div>
+                </a>
+              </div>
+            </div>
+            <!-- Live Mini Neofetch Terminal Dashboard -->
+            <div
+              class="rounded-xl overflow-hidden bg-surface-container-lowest/90 backdrop-blur-md shadow-2xl p-space-md sm:p-space-lg"
+            >
+              <div
+                class="flex items-center justify-between pb-space-sm mb-space-md"
+              >
+                <div
+                  class="flex items-center gap-space-sm font-code-dense text-code-dense"
+                >
+                  <div class="flex items-center gap-1.5">
+                    <span
+                      class="w-2.5 h-2.5 rounded-full bg-error inline-block"
+                    ></span>
+                    <span
+                      class="w-2.5 h-2.5 rounded-full bg-[#FFBD2E] inline-block"
+                    ></span>
+                    <span
+                      class="w-2.5 h-2.5 rounded-full bg-tertiary-fixed inline-block"
+                    ></span>
+                  </div>
+                  <span
+                    class="text-outline text-label-sm font-label-sm uppercase ml-1"
+                    >interactive-session // zsh</span
+                  >
+                </div>
+                <div
+                  class="font-code-dense text-code-dense text-on-surface-variant flex items-center gap-1"
+                >
+                  <span
+                    class="material-symbols-outlined text-[14px] text-tertiary-fixed"
+                    >memory</span
+                  >
+                  <span class="">RAM: 3.4GB / 16GB</span>
+                </div>
+              </div>
+              <!-- Neofetch Display Layout -->
+              <div
+                class="grid grid-cols-1 md:grid-cols-12 gap-space-lg items-center"
+              >
+                <!-- ASCII / Neon Icon Emblem -->
+                <div
+                  class="md:col-span-4 flex flex-col items-center justify-center p-space-md rounded bg-surface-container-low/60 text-center"
+                >
+                  <div
+                    class="text-primary-container font-code-dense text-code-dense leading-none select-none"
+                  >
+                    <pre
+                      class="font-code-dense text-[10px] sm:text-[11px] leading-tight text-primary-container text-left inline-block"
+                    >
+    /\_____/\
    /  o   o  \   GALAXY-OS
   ( ==  ^  == )  v4.19-LTS
    )         (   x86_64
   (           )
  ( (  )   (  ) )
 (__(__)___(__)__)
-            </pre>
-</div>
-<div class="mt-2 flex gap-1">
-<span class="w-3 h-3 rounded-sm bg-primary-container"></span>
-<span class="w-3 h-3 rounded-sm bg-secondary-container"></span>
-<span class="w-3 h-3 rounded-sm bg-tertiary-fixed"></span>
-<span class="w-3 h-3 rounded-sm bg-surface-bright"></span>
-<span class="w-3 h-3 rounded-sm bg-outline"></span>
-</div>
-</div>
-<!-- Terminal Output Text -->
-<div class="md:col-span-8 space-y-1.5 font-code-dense text-code-dense">
-<div class="text-on-surface-variant flex items-center gap-2">
-<span class="text-tertiary-fixed font-bold">user@galaxy</span>
-<span class="text-outline">:</span>
-<span class="text-primary-container">~</span>
-<span class="text-on-surface">$ neofetch --user wajeeha-attique</span>
-</div>
-<div class="pt-1 space-y-1 text-on-surface-variant">
-<div class="flex items-center gap-2">
-<span class="text-primary-container font-medium w-24">OS:</span>
-<span class="text-on-surface">Galaxy OS x86_64 [Kernel 6.8.0-generic]</span>
-</div>
-<div class="flex items-center gap-2">
-<span class="text-primary-container font-medium w-24">Host:</span>
-<span class="text-on-surface">VS Code Terminal CV Workspace</span>
-</div>
-<div class="flex items-center gap-2">
-<span class="text-primary-container font-medium w-24">Uptime:</span>
-<span class="text-on-surface">5 Semesters (Continuous Deployment)</span>
-</div>
-<div class="flex items-center gap-2">
-<span class="text-primary-container font-medium w-24">Status:</span>
-<span class="inline-flex items-center gap-1.5 text-tertiary-fixed font-semibold">
-<span class="w-2 h-2 rounded-full bg-tertiary-fixed"></span>
-                Open to AI opportunities
-              </span>
-</div>
-<div class="flex items-center gap-2">
-<span class="text-primary-container font-medium w-24">Contact:</span>
-<span class="text-secondary-fixed hover:underline cursor-pointer">meow@gmail.com</span>
-<span class="text-outline">|</span>
-<span class="text-on-surface">0123-4567899</span>
-</div>
-<div class="flex items-center gap-2">
-<span class="text-primary-container font-medium w-24">Packages:</span>
-<span class="text-on-surface">C++, Java, React, TensorFlow, OpenCV, Git</span>
-</div>
-</div>
-<div class="pt-2 flex items-center gap-2">
-<span class="text-tertiary-fixed font-bold">user@galaxy:~$</span>
-<span class="w-2.5 h-4 bg-primary-container inline-block animate-pulse"></span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div></main><section class="fixed left-72 right-0 bottom-7 h-36 bg-surface-container-lowest/95 backdrop-blur-xl z-30 flex flex-col shadow-[0_-4px_24px_rgba(0,0,0,0.5)]"><div class="h-8 px-space-md flex items-center justify-between bg-surface-container-low"><div class="flex items-center gap-space-md"><span class="font-label-sm text-label-sm uppercase tracking-wider text-primary-container font-semibold cursor-pointer">TERMINAL</span><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline hover:text-on-surface cursor-pointer">OUTPUT</span><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline hover:text-on-surface cursor-pointer">DEBUG CONSOLE</span><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline hover:text-on-surface cursor-pointer">PORTS</span></div><div class="flex items-center gap-space-sm text-outline"><span class="material-symbols-outlined text-[15px] hover:text-on-surface cursor-pointer">add</span><span class="material-symbols-outlined text-[15px] hover:text-on-surface cursor-pointer">keyboard_arrow_down</span><span class="material-symbols-outlined text-[15px] hover:text-on-surface cursor-pointer">close</span></div></div><div class="flex-1 p-space-sm font-code-dense text-code-dense flex flex-col justify-between overflow-y-auto"><div class="space-y-1"><div class="text-on-surface-variant"><span class="text-tertiary-fixed">guest@galaxy</span><span class="text-outline">:</span><span class="text-primary-container">~</span><span class="text-outline">$</span> <span class="text-on-surface">./init-profile-telemetry.sh --verbose</span></div><div class="text-outline">[200 OK] Telemetry stream connected: nebula-cluster-node-01. Loading developer matrix...</div></div><div class="flex items-center gap-2 pt-1"><span class="text-tertiary-fixed font-bold">guest@galaxy:~$</span><span class="text-primary-container animate-pulse font-bold">cat summary.txt</span><span class="inline-block w-2 h-4 bg-primary-container animate-pulse"></span></div></div></section></div><footer class="fixed bottom-0 left-0 right-0 h-7 bg-surface-container-lowest z-50 flex items-center justify-between px-space-md"><div class="flex items-center gap-space-md font-label-sm text-label-sm"><div class="flex items-center gap-1.5 text-tertiary-fixed font-medium"><span class="w-2 h-2 rounded-full bg-tertiary-fixed inline-block animate-ping"></span><span class="">Open to AI opportunities</span></div><div class="flex items-center gap-1 text-on-surface-variant hover:text-on-surface cursor-pointer"><span class="material-symbols-outlined text-[14px]">alt_route</span><span class="">main*</span></div><div class="flex items-center gap-1 text-outline hover:text-on-surface cursor-pointer"><span class="material-symbols-outlined text-[14px]">sync</span><span class="">0↓ 1↑</span></div></div><div class="flex items-center gap-space-md font-label-sm text-label-sm text-on-surface-variant"><span class="hover:text-on-surface cursor-pointer hidden sm:inline">Spaces: 2</span><span class="hover:text-on-surface cursor-pointer">UTF-8</span><span class="hover:text-on-surface cursor-pointer">LF</span><span class="text-primary-container font-semibold hover:text-primary cursor-pointer">JavaScript / Markdown</span><span class="material-symbols-outlined text-[14px] text-tertiary-fixed">notifications</span></div></footer>
-</body></html>
+            </pre
+                    >
+                  </div>
+                  <div class="mt-2 flex gap-1">
+                    <span
+                      class="w-3 h-3 rounded-sm bg-primary-container"
+                    ></span>
+                    <span
+                      class="w-3 h-3 rounded-sm bg-secondary-container"
+                    ></span>
+                    <span class="w-3 h-3 rounded-sm bg-tertiary-fixed"></span>
+                    <span class="w-3 h-3 rounded-sm bg-surface-bright"></span>
+                    <span class="w-3 h-3 rounded-sm bg-outline"></span>
+                  </div>
+                </div>
+                <!-- Terminal Output Text -->
+                <div
+                  class="md:col-span-8 space-y-1.5 font-code-dense text-code-dense"
+                >
+                  <div class="text-on-surface-variant flex items-center gap-2">
+                    <span class="text-tertiary-fixed font-bold"
+                      >user@galaxy</span
+                    >
+                    <span class="text-outline">:</span>
+                    <span class="text-primary-container">~</span>
+                    <span class="text-on-surface"
+                      >$ neofetch --user wajeeha-attique</span
+                    >
+                  </div>
+                  <div class="pt-1 space-y-1 text-on-surface-variant">
+                    <div class="flex items-center gap-2">
+                      <span class="text-primary-container font-medium w-24"
+                        >OS:</span
+                      >
+                      <span class="text-on-surface"
+                        >Galaxy OS x86_64 [Kernel 6.8.0-generic]</span
+                      >
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <span class="text-primary-container font-medium w-24"
+                        >Host:</span
+                      >
+                      <span class="text-on-surface"
+                        >VS Code Terminal CV Workspace</span
+                      >
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <span class="text-primary-container font-medium w-24"
+                        >Uptime:</span
+                      >
+                      <span class="text-on-surface"
+                        >5 Semesters (Continuous Deployment)</span
+                      >
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <span class="text-primary-container font-medium w-24"
+                        >Status:</span
+                      >
+                      <span
+                        class="inline-flex items-center gap-1.5 text-tertiary-fixed font-semibold"
+                      >
+                        <span
+                          class="w-2 h-2 rounded-full bg-tertiary-fixed"
+                        ></span>
+                        Open to AI opportunities
+                      </span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <span class="text-primary-container font-medium w-24"
+                        >Contact:</span
+                      >
+                      <span
+                        class="text-secondary-fixed hover:underline cursor-pointer"
+                        >meow@gmail.com</span
+                      >
+                      <span class="text-outline">|</span>
+                      <span class="text-on-surface">0123-4567899</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <span class="text-primary-container font-medium w-24"
+                        >Packages:</span
+                      >
+                      <span class="text-on-surface"
+                        >C++, Java, React, TensorFlow, OpenCV, Git</span
+                      >
+                    </div>
+                  </div>
+                  <div class="pt-2 flex items-center gap-2">
+                    <span class="text-tertiary-fixed font-bold"
+                      >user@galaxy:~$</span
+                    >
+                    <span
+                      class="w-2.5 h-4 bg-primary-container inline-block animate-pulse"
+                    ></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <section
+        class="fixed left-72 right-0 bottom-7 h-36 bg-surface-container-lowest/95 backdrop-blur-xl z-30 flex flex-col shadow-[0_-4px_24px_rgba(0,0,0,0.5)]"
+      >
+        <div
+          class="h-8 px-space-md flex items-center justify-between bg-surface-container-low"
+        >
+          <div class="flex items-center gap-space-md">
+            <span
+              class="font-label-sm text-label-sm uppercase tracking-wider text-primary-container font-semibold cursor-pointer"
+              >TERMINAL</span
+            ><span
+              class="font-label-sm text-label-sm uppercase tracking-wider text-outline hover:text-on-surface cursor-pointer"
+              >OUTPUT</span
+            ><span
+              class="font-label-sm text-label-sm uppercase tracking-wider text-outline hover:text-on-surface cursor-pointer"
+              >DEBUG CONSOLE</span
+            ><span
+              class="font-label-sm text-label-sm uppercase tracking-wider text-outline hover:text-on-surface cursor-pointer"
+              >PORTS</span
+            >
+          </div>
+          <div class="flex items-center gap-space-sm text-outline">
+            <span
+              class="material-symbols-outlined text-[15px] hover:text-on-surface cursor-pointer"
+              >add</span
+            ><span
+              class="material-symbols-outlined text-[15px] hover:text-on-surface cursor-pointer"
+              >keyboard_arrow_down</span
+            ><span
+              class="material-symbols-outlined text-[15px] hover:text-on-surface cursor-pointer"
+              >close</span
+            >
+          </div>
+        </div>
+        <div
+          class="flex-1 p-space-sm font-code-dense text-code-dense flex flex-col justify-between overflow-y-auto"
+        >
+          <div class="space-y-1">
+            <div class="text-on-surface-variant">
+              <span class="text-tertiary-fixed">guest@galaxy</span
+              ><span class="text-outline">:</span
+              ><span class="text-primary-container">~</span
+              ><span class="text-outline">$</span>
+              <span class="text-on-surface"
+                >./init-profile-telemetry.sh --verbose</span
+              >
+            </div>
+            <div class="text-outline">
+              [200 OK] Telemetry stream connected: nebula-cluster-node-01.
+              Loading developer matrix...
+            </div>
+          </div>
+          <div class="flex items-center gap-2 pt-1">
+            <span class="text-tertiary-fixed font-bold">guest@galaxy:~$</span
+            ><span class="text-primary-container animate-pulse font-bold"
+              >cat summary.txt</span
+            ><span
+              class="inline-block w-2 h-4 bg-primary-container animate-pulse"
+            ></span>
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer
+      class="fixed bottom-0 left-0 right-0 h-7 bg-surface-container-lowest z-50 flex items-center justify-between px-space-md"
+    >
+      <div class="flex items-center gap-space-md font-label-sm text-label-sm">
+        <div class="flex items-center gap-1.5 text-tertiary-fixed font-medium">
+          <span
+            class="w-2 h-2 rounded-full bg-tertiary-fixed inline-block animate-ping"
+          ></span
+          ><span class="">Open to AI opportunities</span>
+        </div>
+        <div
+          class="flex items-center gap-1 text-on-surface-variant hover:text-on-surface cursor-pointer"
+        >
+          <span class="material-symbols-outlined text-[14px]">alt_route</span
+          ><span class="">main*</span>
+        </div>
+        <div
+          class="flex items-center gap-1 text-outline hover:text-on-surface cursor-pointer"
+        >
+          <span class="material-symbols-outlined text-[14px]">sync</span
+          ><span class="">0↓ 1↑</span>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-space-md font-label-sm text-label-sm text-on-surface-variant"
+      >
+        <span class="hover:text-on-surface cursor-pointer hidden sm:inline"
+          >Spaces: 2</span
+        ><span class="hover:text-on-surface cursor-pointer">UTF-8</span
+        ><span class="hover:text-on-surface cursor-pointer">LF</span
+        ><span
+          class="text-primary-container font-semibold hover:text-primary cursor-pointer"
+          >JavaScript / Markdown</span
+        ><span class="material-symbols-outlined text-[14px] text-tertiary-fixed"
+          >notifications</span
+        >
+      </div>
+    </footer>
+  </body>
+</html>
